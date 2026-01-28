@@ -7,11 +7,10 @@ import {
 	Paragraph,
 	TextInput,
 	Button
-} from "@nicholas-roether/palantir-ui-solid";
+} from "@lina-roether/palantir-ui-solid";
 import EyeballIcon from "~icons/game-icons/eyeball";
 import { JoinInfo, parseJoinString } from "../join_string";
 import { extensionIsPresent, startPalantirClientSession } from "../extension";
-
 
 interface JoinFormProps {
 	hostId: string;
@@ -46,11 +45,7 @@ function JoinForm({ hostId }: JoinFormProps): JSX.Element {
 	return (
 		<form class={joinForm} ref={formRef} onSubmit={onSubmit}>
 			<input hidden type="text" name="hostId" value={hostId} />
-			<TextInput
-				name="username"
-				placeholder="Nickname"
-				aria-label="Nickname"
-			/>
+			<TextInput name="username" placeholder="Nickname" aria-label="Nickname" />
 			<TextInput
 				type="password"
 				name="accessToken"
@@ -90,8 +85,8 @@ function Invitation({ joinInfo }: InvitationProps): JSX.Element {
 		<>
 			<Heading size="1">An Invitation</Heading>
 			<Paragraph>
-				You can hear the eerie whispers of <b>{joinInfo.hostName}</b>{" "}
-				coming from beyond the shroud.
+				You can hear the eerie whispers of <b>{joinInfo.hostName}</b> coming
+				from beyond the shroud.
 			</Paragraph>
 			<Paragraph class={quote}>
 				Say the secret phrase, and see through my eyes
@@ -106,8 +101,8 @@ function InvalidJoinString(): JSX.Element {
 		<>
 			<Heading size="1">Nothing.</Heading>
 			<Paragraph>
-				The abyss peers back at you, black and empty. It does not
-				understand your intentions.
+				The abyss peers back at you, black and empty. It does not understand
+				your intentions.
 			</Paragraph>
 			<Paragraph>
 				<em>(Your join link is invalid.)</em>

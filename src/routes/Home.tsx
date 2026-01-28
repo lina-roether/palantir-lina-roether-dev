@@ -1,5 +1,5 @@
 import { JSX } from "solid-js";
-import { Heading, Paragraph } from "@nicholas-roether/palantir-ui-solid";
+import { Heading, Paragraph } from "@lina-roether/palantir-ui-solid";
 import { css } from "@emotion/css";
 
 const center = css`
